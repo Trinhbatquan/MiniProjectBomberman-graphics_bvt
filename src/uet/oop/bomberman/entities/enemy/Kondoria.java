@@ -6,7 +6,6 @@ import uet.oop.bomberman.entities.ai.AIMedium;
 import uet.oop.bomberman.entities.move.Bomber;
 
 public class Kondoria extends Enemy {
-
     /**
      * author me.
      * @param xUnit xUnit coordinate

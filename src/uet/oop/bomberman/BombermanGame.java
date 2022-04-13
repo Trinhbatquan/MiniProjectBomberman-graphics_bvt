@@ -73,7 +73,6 @@ public class BombermanGame extends Application {
         // Tao root container
         Group root = new Group();
         root.getChildren().add(canvas);
-
         // Tao scene
         Scene scene = new Scene(root);
         primanyScholl.setTitle("B O O M");
