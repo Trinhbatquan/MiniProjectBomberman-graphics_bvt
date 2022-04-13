@@ -1,45 +1,34 @@
 package uet.oop.bomberman;
 
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.control.Button;
-
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.io.IOException;
-import javafx.scene.Parent;
-
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import uet.oop.bomberman.entities.bomb.Bomb;
-import uet.oop.bomberman.entities.bomb.Flames;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
-import uet.oop.bomberman.entities.Map;
-import uet.oop.bomberman.entities.move.Bomber;
-import uet.oop.bomberman.entities.StaticEntity;
+import uet.oop.bomberman.audio.Audio;
 import uet.oop.bomberman.entities.DynamicEntity;
+import uet.oop.bomberman.entities.Map;
+import uet.oop.bomberman.entities.StaticEntity;
+import uet.oop.bomberman.entities.bomb.Bomb;
+import uet.oop.bomberman.entities.bomb.Flames;
+import uet.oop.bomberman.entities.move.Bomber;
 import uet.oop.bomberman.graphics.Sprite;
+
 import java.util.ArrayList;
 import java.util.List;
-import uet.oop.bomberman.audio.*;
 
-import javax.print.DocFlavor;
-
-public class BombermanGame extends Application implements Initializable {
+public class BombermanGame extends Application {
 
     public static int WIDTH;
     public static int HEIGHT;
@@ -73,34 +62,8 @@ public class BombermanGame extends Application implements Initializable {
 
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle libarary) {
-        System.out.println("o");
-        String url ="src/uet/oop/bomberman/background.fxml";
-        try {
-            InputStream fxmlStream = new FileInputStream(url);
-            root = (new FXMLLoader()).load(fxmlStream);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-
-    }
-
-    @Override
-    public void start (Stage primanyScholl) {
-
-
-        Scene scene = new Scene(root);
-        primanyScholl.setScene(scene);
-        primanyScholl.setResizable(false);
-        primanyScholl.show();
-
-    }
-
-
-    public void startGameButton(ActionEvent event) {
+    public void start(Stage primanyScholl) {
         WIDTH = MapgameLoad.column;
         HEIGHT = MapgameLoad.horizontal;
         audio.playMeme();
@@ -113,8 +76,7 @@ public class BombermanGame extends Application implements Initializable {
 
         // Tao scene
         Scene scene = new Scene(root);
-
-        // Them scene vao stage
+        primanyScholl.setTitle("B O O M");
         primanyScholl.setScene(scene);
         primanyScholl.show();
 
@@ -286,4 +248,6 @@ public class BombermanGame extends Application implements Initializable {
     public void nextMap() {
     // chưa cần
     }
+
+
 }

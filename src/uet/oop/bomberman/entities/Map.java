@@ -33,7 +33,7 @@ public class Map {
 
     public void loadFile(){
 
-        File file = new File("res/levels/level1.txt");
+        File file = new File("res/levels/level3.txt");
         Scanner scan = null;
         try {
             scan = new Scanner(file);

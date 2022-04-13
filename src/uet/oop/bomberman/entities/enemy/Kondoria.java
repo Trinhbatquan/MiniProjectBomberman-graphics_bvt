@@ -2,10 +2,8 @@ package uet.oop.bomberman.entities.enemy;
 
 import javafx.scene.image.Image;
 import uet.oop.bomberman.BombermanGame;
-import uet.oop.bomberman.entities.Map;
+import uet.oop.bomberman.entities.ai.AIMedium;
 import uet.oop.bomberman.entities.move.Bomber;
-import uet.oop.bomberman.entities.ai.*;
-import edu.princeton.cs.algs4.UF;
 
 public class Kondoria extends Enemy {
 
